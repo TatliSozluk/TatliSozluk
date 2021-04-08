@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete  //Bu class ekleme,silme,güncelleme ve listeleme(temel işlemleri) yapar. 
 {
-    class EfEntityRepositoryBase<T, TContext> : IEntityRepository<T>
+   public class EfEntityRepositoryBase<T, TContext> : IEntityRepository<T>
         where T : class, IEntity, new()
         where TContext : DbContext, new()
     {
@@ -44,7 +44,7 @@ namespace DataAccess.Concrete  //Bu class ekleme,silme,güncelleme ve listeleme(
 
         public List<T> GetList(Expression<Func<T, bool>> filter = null)
         {
-            throw new NotImplementedException(); using (TContext context = new TContext())
+             using (TContext context = new TContext())
             {
                 return filter == null
                     ? context.Set<T>().ToList()

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    interface IEntityRepository<T> where T:class,IEntity,new()
+   public interface IEntityRepository<T> where T:class,IEntity,new()
     {
         T Get(Expression<Func<T,bool>> filter);
         List<T> GetList(Expression<Func<T, bool>> filter=null);

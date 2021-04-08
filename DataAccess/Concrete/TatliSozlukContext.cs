@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-    class TatliSozlukContext : DbContext
+   public class TatliSozlukContext : DbContext
     {
         // bu class veritabanı ile proje class'larını bağlar
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "WebUI\WebUI.csproj", "{AE4F7994-243E-4DE1-95C4-F44DB9F3B8AD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frontend", "frontend", "{C714D052-35AB-4AA5-A1B8-6A746FAC3635}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql", "sql", "{40C976E3-579E-4F87-8996-3FCB06BAC1E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fronted", "fronted", "{BFBC459D-3EB3-4EB6-82C0-8D1625BC3806}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

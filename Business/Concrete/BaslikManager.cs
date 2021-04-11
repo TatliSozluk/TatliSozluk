@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
+    //buraya koşullar ve gereklilikler yazılacak
    public class BaslikManager: IBaslikService
     {
     }

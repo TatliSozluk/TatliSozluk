@@ -12,7 +12,7 @@ uyeCins char(1) DEFAULT 'N',
 
 create table Konu(    
 konuNo int PRIMARY KEY IDENTITY(1,1), 
-konuAd varchar(30) NOT NULL
+konuAd varchar(30) NOT NULL,
 )
 
 create table Baslik(
@@ -30,7 +30,7 @@ yorumNo int PRIMARY KEY IDENTITY(1,1),
 uyeNo int NOT NULL,
 baslikNo int NOT NULL,
 CONSTRAINT fky_uyeNo FOREIGN KEY (uyeNo) REFERENCES Uye(uyeNo),
-CONSTRAINT fky_konuNo FOREIGN KEY (baslikNo) REFERENCES Baslik(baslikNo),
+CONSTRAINT fky_baslikNo FOREIGN KEY (baslikNo) REFERENCES Baslik(baslikNo),
 yorum varchar(3000) NOT NULL, 
 yorumTar varchar(20) NOT NULL default FORMAT (getdate(), 'dd/MM/yyyy  hh:mm'),
 )

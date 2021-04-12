@@ -1,37 +1,40 @@
 USE TatliSozluk
 
-CREATE TABLE Konu(
-	konuNo INT IDENTITY(1, 1) PRIMARY KEY,
-	konuAd VARCHAR(30) NOT NULL,
+create table Uye(
+uyeNo int PRIMARY KEY IDENTITY(1,1), 
+uyeNick varchar(25) UNIQUE NOT NULL, 
+uyeMail varchar(255) UNIQUE NOT NULL,
+uyeSifre CHAR(60) NOT NULL,
+uyeDogTar DATE NOT NULL,	--Sonra bakýlacak deðerin formatý yanlýþ
+uyeKatTar varchar(20) NOT NULL default FORMAT (getdate(), 'dd/MM/yyyy'),
+uyeCins char(1) DEFAULT 'N',
 )
 
-CREATE TABLE Uye(
-	uyeNo INT IDENTITY(1, 1) PRIMARY KEY,
-	uyeNick VARCHAR(25) UNIQUE NOT NULL,
-	uyeMail VARCHAR(255) UNIQUE NOT NULL,
-	uyeDogTar DATE NOT NULL,
-	uyeKatTar DATE NOT NULL,
-	uyeCins CHAR(1) DEFAULT 'N',
-	uyeSifre CHAR(60) NOT NULL,
-	
+create table Konu(    
+konuNo int PRIMARY KEY IDENTITY(1,1), 
+konuAd varchar(30) NOT NULL
 )
 
-CREATE TABLE Baslik(
-	baslikNo INT IDENTITY(1, 1) PRIMARY KEY,
-	uyeNo INT NOT NULL,
-	konuNo INT NOT NULL,
-	baslikAd VARCHAR(50) NOT NULL,
-	baslikTar SMALLDATETIME NOT NULL,
-	CONSTRAINT Baslik_fk_uyeNo FOREIGN KEY (uyeNo) REFERENCES Uye(uyeNo),
-	CONSTRAINT Baslik_fk_konuNo FOREIGN KEY (konuNo) REFERENCES Konu(konuNo)
+create table Baslik(
+baslikNo int PRIMARY KEY IDENTITY(1,1), 
+uyeNo INT NOT NULL,
+konuNo INT NOT NULL,
+CONSTRAINT fkb_uyeNo FOREIGN KEY (uyeNo) REFERENCES Uye(uyeNo),
+CONSTRAINT fkb_konuNo FOREIGN KEY (konuNo) REFERENCES Konu(konuNo),
+baslikTar varchar(20) NOT NULL default FORMAT (getdate(), 'dd/MM/yyyy  hh:mm'),
+baslikAd varchar(50) NOT NULL,
 )
 
-CREATE TABLE Yorum(
-	yorumNo INT IDENTITY(1, 1) PRIMARY KEY,
-	uyeNo INT NOT NULL,
-	baslikNo INT NOT NULL,
-	yorumTar SMALLDATETIME NOT NULL,
-	yorum VARCHAR(8000) NOT NULL, 
-	CONSTRAINT Yorum_fk_uyeNo FOREIGN KEY (uyeNo) REFERENCES Uye(uyeNo),
-	CONSTRAINT Yorum_fk_baslikNo FOREIGN KEY (baslikNo) REFERENCES Baslik(baslikNo)
+create table Yorum(
+yorumNo int PRIMARY KEY IDENTITY(1,1), 
+uyeNo int NOT NULL,
+baslikNo int NOT NULL,
+CONSTRAINT fky_uyeNo FOREIGN KEY (uyeNo) REFERENCES Uye(uyeNo),
+CONSTRAINT fky_konuNo FOREIGN KEY (baslikNo) REFERENCES Baslik(baslikNo),
+yorum varchar(3000) NOT NULL, 
+yorumTar varchar(20) NOT NULL default FORMAT (getdate(), 'dd/MM/yyyy  hh:mm'),
 )
+
+
+
+

@@ -9,13 +9,17 @@ using System.Threading.Tasks;
 
 namespace WebUI.Controllers
 {
+ 
     public class HomeController : Controller
     {
-        IKonuService konuService;
+        IKonuService konuService; IYorumService yorumService; IUyeService uyeService;
 
-        public HomeController(IKonuService konuService)
+        public HomeController(IKonuService konuService, IYorumService yorumService,
+            IUyeService uyeService)// Dependency injection
         {
             this.konuService = konuService;
+            this.yorumService = yorumService;
+            this.uyeService = uyeService;
         }
 
         public IActionResult Index()
@@ -26,9 +30,22 @@ namespace WebUI.Controllers
         // konuliste fonksiyonu veritabanı ile bağlantı  testi için yazıldı. 
         //Program çalıştırıldığı zaman url olarak = https://localhost:44362/Home/konuliste girerseniz, veritabanından konuları çekiyor.
         public List<Konu> konuliste() 
-
         {
-            return konuService.GetAll().ToList();
+            return konuService.GetAll();
         }
+
+
+
+        public List<Uye> uyeler()
+        {
+            return uyeService.GetAll();
+        }
+        
+        [HttpPost]
+        public void uyeEkle([FromBody]Uye uye)
+        {
+            uyeService.Add(uye);
+        }
+
     }
 }

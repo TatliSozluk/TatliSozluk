@@ -8,15 +8,16 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-   public class TatliSozlukContext : DbContext
+   public class TatliSozlukContext : DbContext  // bu class veritabanı ile proje class'larını bağlar
     {
-        // bu class veritabanı ile proje class'larını bağlar
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TatliSozluk1;Trusted_Connection=true");
+            //bağlanılacak veritabanını belirtme
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TatliSozluk2;Trusted_Connection=true");
         }
 
+        //Veritabanı tablolarına karşılık gelen class'ların ilişkilendirilmesi
         public DbSet<Uye> Uye { get; set; }
         public DbSet<Konu> Konu { get; set; }
         public DbSet<Baslik> Baslik { get; set; }

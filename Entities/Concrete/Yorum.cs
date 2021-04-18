@@ -10,11 +10,12 @@ namespace Entities.Concrete
 {
     public class Yorum :IEntity
     {
+        [Key]
+        public int yorumNo { get; set; }
         public int uyeNo { get; set; }
         public int baslikNo { get; set; }
-       [Key]
-        public int yorumNo { get; set; }
-        public DateTime yorumTar { get; set; }
         public string yorum { get; set; }
+        public string yorumTar { get; set; }
+        
     }
 }

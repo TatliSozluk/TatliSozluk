@@ -29,9 +29,10 @@ namespace WebUI
         {
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();
-            services.AddScoped<IKonuService, KonuManager>();
-            services.AddScoped<IKonuDal, KonuDal>();
-            
+            services.AddScoped<IKonuService, KonuManager>(); services.AddScoped<IKonuDal, KonuDal>();
+            services.AddScoped<IYorumService, YorumManager>(); services.AddScoped<IYorumDal, YorumDal>();
+            services.AddScoped<IUyeService, UyeManager>(); services.AddScoped<IUyeDal, UyeDal>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

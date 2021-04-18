@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-   public class Baslik : IEntity
+   public class Baslik : IEntity   //Veritabanındaki Baslik Tablosuna karşılık gelen class
     {
+        [Key]
+        public int baslikNo { get; set; }
         public int uyeNo { get; set; }
         public int konuNo { get; set; }
-       [Key]
-        public int baslikNo { get; set; }
+        public string baslikTar { get; set; }
         public string baslikAd { get; set; }
-        public DateTime baslikTar { get; set; }
+        
 
     }
 }

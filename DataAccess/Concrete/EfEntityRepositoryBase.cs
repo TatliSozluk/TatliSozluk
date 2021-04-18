@@ -20,7 +20,7 @@ namespace DataAccess.Concrete  //Bu class ekleme,silme,güncelleme ve listeleme(
             {
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
-                context.SaveChanges();
+                context.SaveChanges();         
             }
         }
 
@@ -42,7 +42,7 @@ namespace DataAccess.Concrete  //Bu class ekleme,silme,güncelleme ve listeleme(
             }
         }
 
-        public List<T> GetList(Expression<Func<T, bool>> filter = null)
+        public List<T> GetList(Expression<Func<T, bool>> filter = null) // eğer filtre(sorgu) yazılmaz ise tüm listeyi getirir.
         {
              using (TContext context = new TContext())
             {

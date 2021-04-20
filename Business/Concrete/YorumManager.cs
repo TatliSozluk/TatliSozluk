@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,11 @@ namespace Business.Concrete
         public Yorum GetById(int yorumId)
         {
             return yorumDal.Get(p=> p.yorumNo==yorumId);
+        }
+
+        public List<YorumDto> GetYorumDetails()
+        {
+            return yorumDal.GetYorumDetails();
         }
 
         public void Update(Yorum yorum)

@@ -1,4 +1,5 @@
 ﻿using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace Business.Abstract
         public void Add(Yorum yorum);
         public void Delete(Yorum yorum);
         public void Update(Yorum yorum);
+        List<YorumDto> GetYorumDetails();
     }
 }

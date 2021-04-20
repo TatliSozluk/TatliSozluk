@@ -24,6 +24,17 @@ namespace WebUI.Controllers
 
         public IActionResult Index()
         {
+           var yorumlar= yorumService.GetYorumDetails();
+            return View(yorumlar);
+        }
+
+        public IActionResult KayitOl() // kayıt ol sayfası döner=https://localhost:44362/Home/KayitOl
+        {
+            return View();
+        }
+
+        public IActionResult Login() // giriş sayfası döner sayfası döner=https://localhost:44362/Home/KayitOl
+        {
             return View();
         }
 

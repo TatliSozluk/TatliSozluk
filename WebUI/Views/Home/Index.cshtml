@@ -1,17 +1,66 @@
-﻿
+﻿@model List<Entities.DTOs.YorumDto>
+
 @{
-    Layout = null;
+    Layout = "_SiteLayout";
 }
 
-<!DOCTYPE html>
+<!--  Ekranı 3'e böldürdüm-->
+<!--  baştaki kısım-->
+<div class="container ">
+    <!--  container ekranı tamamen değilde bir kısmını kaplatıyor -->
+    <div class="row sayfa_uzunluk  ">
+        <div class="col bg-danger">
+            1 of 3
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <h1>ANA SAYFA </h1>
-    
-</body>
-</html>
+
+        </div>
+
+
+        <!-- ortadaki kısım-->
+        <!--  sayfa geçiş kısmı-->
+        <div class="col-6 bg-primary">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            @foreach (var yorum in Model)
+            {
+        <div> 
+            <h3>@yorum.BaslikAd</h3>
+            <p>
+                @yorum.Yorum <br />
+
+                @yorum.UyeNick <br /> @yorum.YorumTarihi
+            </p>
+        </div>
+           
+
+        
+            }
+
+
+        </div>
+
+
+        <!--  en sağdaki kısım-->
+        <div class="col bg-danger">
+            3 of 3
+        </div>
+
+    </div>
+
+</div>

@@ -6,11 +6,24 @@
     <meta name="viewport" content="width=device-width" />
     <title>TATLI SÖZLÜK</title>
 
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/stil.css">
 </head>
+
+
 <body>
-    <div>
-        @RenderBody()
-    </div>
+    @Html.Partial("~/Views/Home/Partial/_HeaderPartial.cshtml");
+
+    
+
+        @RenderBody();
+    
+    
+
+
+    @Html.Partial("~/Views/Home/Partial/_FooterPartial.cshtml");
+
+    
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

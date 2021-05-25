@@ -99,24 +99,49 @@
 
                   <form>
                     <div class="form-group row">
-                      <label for="lgFormGroupInput" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
-                      <div class="col-sm-10">
-                        <input type="email" class="form-control form-control-lg" id="lgFormGroupInput" placeholder="deneme@gmail.com">
+                      <label for="lgFormGroupInput" class="col-sm-3 col-form-label col-form-label-md">Email</label>
+                      <div class="col-sm-9">
+                        <input type="email" class="form-control form-control-md" id="lgFormGroupInput" placeholder="deneme@gmail.com" required>
                       </div>
                     </div>
 
+                    
                     <div class="row mt-3 mb-3">
-                      <label for="inputPassword3" class="col-sm-2 col-form-label col-form-label-lg">Şifre</label>
-                      <div class="col-sm-10">
-                        <input type="password" class="form-control form-control-lg " id="inputPassword3" placeholder=" ***********">
+                      <label for="inputPassword3" class="col-sm-3 col-form-label col-form-label-md">Şifre</label>
+                      <div class="col-sm-9">
+                        <input type="password" class="form-control form-control-md " id="inputPassword3" placeholder=" ***********"  required>
                       </div>
                     </div>
-                  </form>
+               
 
+                   <!--  Nick name kısmı -->
+
+                  <div class="row mt-3 mb-3">
+                    <label for="inputPassword3" class="col-sm-3 col-form-label col-form-label-md">Kullanıcı Adı</label>
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control form-control-md " id="inputPassword3" placeholder=" TatlıSözlük"  required>
+                    </div>
+                  </div>
+               
+
+
+                   <!--   Doğum Tarihi kısmı  -->
+
+                   <div class="row mt-3 mb-3">
+                    <label for="input" class="col-sm-3 col-form-label col-form-label-md">Doğum Tarihi</label  required>
+                    <div class="col-sm-9">
+                      <input type="date" name="dogumtarihi">
+                    </div>
+                  </div>
+              
+                 
+                 
+
+                   <!--  Cinsiyet belirtme kısmı  -->
 
                   <fieldset class="row mb-3">
-                    <legend class="col-form-label col-sm-2 pt-0">Cinsiyet</legend>
-                    <div class="col-sm-10">
+                    <legend class="col-form-label col-sm-3 pt-0 ">Cinsiyet</legend>
+                    <div class="col-sm-8 ">
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                         <label class="form-check-label" for="gridRadios1">
@@ -140,16 +165,23 @@
                     </div>
 
                     </fieldset>
-
+                    
+                     <!--   kayıt ol butonu -->
 
                 <center><button type="submit" class="btn btn-primary mt-3">Kayıt Ol</button></center>
 
+
+              </form>
+               
+
               </div>
+            </div>
+
 
               <!--   email şifre kısmı bitti -->
 
 
-            </div>
+            
 
 
       <!--  en sağdaki kısım-->

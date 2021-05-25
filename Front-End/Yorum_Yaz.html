@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>TATLI SÖZLÜK</title>
+    <title>TATLI SÖZLÜK - Yorum Yaz</title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href=" stil.css">
@@ -14,7 +14,7 @@
 
 <nav class="navbar sticky-top navbar-expand-lg navbar navbar-light mb-2" style="background-color:#42A5F5;">           <!--  yukarıdaki bar-->
   <div class="container-fluid ">
-    <a class="navbar-brand me-5 "  href="index.html"> <input type="image" class="btn btn-light " src="logo.png" value="submit" height="55px" width="130px" ></a>
+    <a class="navbar-brand me-5 "  href="index.html">TATLI SÖZLÜK</a>
     <button class="navbar-toggler  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
@@ -78,52 +78,95 @@
         <!--  baştaki kısım-->
       <div class="container ">     <!--  container ekranı tamamen değilde bir kısmını kaplatıyor -->
       <div class="row sayfa_uzunluk  ">
-        <div class="col bg-danger">
-          1 of 3
+        <div class="col  ">
+        
 
 
         </div>
 
 
   <!-- ortadaki kısım-->
+    <!--  sayfa geçiş kısmı-->
+        <div class="col-6 ">
 
 
-  <!--  sayfa geçiş kısmı-->
-  <div class="col-6 bg-primary">
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-   
-
-   
+            <select class="form-select form-select-sm mt-5" aria-label=".form-select-sm example">
+                <option selected>BAŞLIK SEÇ</option>
+                <option value="1">Spor</option>
+                <option value="2">Siyaset</option>
+                <option value="3">Ekonomi</option>
+                <option value="1">Magazin</option>
+                <option value="2">Teknoloji</option>
+                <option value="3">Sağlık</option>
+                <option value="1">Yaşam</option>
+              </select>
 
 
+
+              <select class="form-select form-select-sm mt-3" aria-label=".form-select-sm example">
+                <option selected>GÜNDEM SEÇ</option>
+                <option value="1">Zeminlerimiz neden bu kadar kötü</option>
+                <option value="2">Euro 2021'ki potansiyelimiz</option>
+                <option value="2">Formula 1 de bu senede yarış alabilir miyiz?</option>
+                
+              </select>
 
 
 
 
+              <div class="mt-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Farklı Bir gündem Oluştur</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Eğer üstte gündem seçtiysen burayı boş burak"></textarea>
+              </div>
 
-  
+
+
+              
+
+
+          
+             <div class="mt-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Yaz Bakalım Ne Yazacaksın</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15"></textarea>
+              </div>
+
+
+              <div class="col-auto mt-3 ">
+                <button type="submit" class="btn btn-primary mb-3">Yolla bakalım</button>
+              </div>
+
+
+
+
+
+
+ 
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Default radio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Default checked radio
+                </label>
+              </div>
+
+
+
+ 
+
+
+              
+        </div>
 
 
   <!--  en sağdaki kısım-->
-        <div class="col bg-danger">
-          3 of 3
+        <div class="col ">
+         
         </div>
 
       </div>

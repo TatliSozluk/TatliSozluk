@@ -24,6 +24,6 @@ Kişisel kullanıcı sayfalarımızdan yada mail üzerinden istediğiniz develop
 
 [Halil AYDIN](https://github.com/halilaydin242188)  
 [Beytullah AY](https://github.com/BeytullahAy)  
-[Buğra DARYAL](https://github.com/Oyuasx)   
+[Buğra DARYAL](https://github.com/bugradaryal)   
 [Serhat ORAL](https://github.com/serhatoral)  
 [Samet HAN](https://github.com/smthnn)  
